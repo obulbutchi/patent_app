@@ -41,7 +41,7 @@ public class PatentController {
 	 * @return
 	 */
 	 @GetMapping("/patent/{id}")
-	 public Patent patent(@PathVariable Long patentID) {
+	 public Patent patent(@PathVariable(name="id") Long patentID) {
 		 return patentService.get(patentID);
 	 }
 	 
