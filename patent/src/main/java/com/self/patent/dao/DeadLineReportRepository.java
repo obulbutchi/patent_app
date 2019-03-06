@@ -17,7 +17,7 @@ public interface DeadLineReportRepository extends JpaRepository<DeadlineReport, 
 	 * @param currentdate
 	 * @return
 	 */
-	@Query("select * from patent where status = 'Pending'  and\r\n" + 
+	@Query("select p from Patent p where status = 'Pending'  and\r\n" + 
 			" datediff('hour',  current_timestamp, target_time)  <= 12")
 	
 	public List<Patent> makeReport();
